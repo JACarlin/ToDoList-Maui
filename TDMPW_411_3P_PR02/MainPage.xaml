@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TDMPW_411_3P_PR02.MainPage"
+             BackgroundColor="DeepSkyBlue">
+
+    <Grid Margin="5"
+          BackgroundColor="DeepSkyBlue"
+          RowDefinitions=".1*,.1*,.35*,.35*">
+        <Grid.Background>
+
+            <LinearGradientBrush
+                EndPoint="0,1" >
+                <GradientStop Offset="0.0" Color="DeepSkyBlue"></GradientStop>
+                <GradientStop Offset="1" Color="DarkBlue"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Text="TO DO LIST"
+               TextColor="DarkBlue"
+               Grid.Row="0"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               FontSize="Header"/>
+        
+            <Entry Grid.Row="1" Margin="20" TextColor="White" BackgroundColor="DarkBlue" Placeholder="Ingresa tus tareas..." Completed="Entry_Completed"
+                   x:Name="txtEntry"></Entry>
+       
+        <Frame Margin="5"
+               BackgroundColor="Gold"
+               BorderColor="Transparent"
+               Grid.Row="2">
+            <Grid
+                RowDefinitions=".2*,.8*">
+                <Label Text="TO DO"
+                       TextColor="OrangeRed"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="25"
+                       Grid.Row="0"
+                       />
+                <ScrollView WidthRequest="400" Grid.Row="1">
+
+                    <VerticalStackLayout x:Name="contenedor2" >
+                        
+                    </VerticalStackLayout>
+
+                </ScrollView>
+            </Grid>
+        </Frame>
+        <Frame Margin="5"
+               BackgroundColor="SeaGreen"
+               BorderColor="Transparent"
+               Grid.Row="3">
+            <Grid
+                RowDefinitions=".2*,.8*">
+                <Label Text="COMPLETED"
+                       TextColor="LawnGreen"
+                       HorizontalTextAlignment="Center"
+                       FontAttributes="Bold"
+                       FontSize="25"
+                       Grid.Row="0"
+                       />
+                <ScrollView WidthRequest="350" Grid.Row="1">
+
+                    <VerticalStackLayout x:Name="contenedor">
+                        
+
+                    </VerticalStackLayout>
+
+                </ScrollView>
+            </Grid>
+        </Frame>
+    </Grid>
+</ContentPage>
